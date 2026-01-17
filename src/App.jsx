@@ -1,4 +1,15 @@
+import Card from "./components/Card";
+
 const App = () => {
+
+  const [produtos, setProdutos] = useSetate([]);
+
+  async function buscarPprodutos(params) {
+    const request = await fetch("https://fakestoreapi.com/products");
+    const response = await request.json()
+
+    setProdutos(response);
+  }
   return ( 
     <div>
       <header className="flex justify-between px-15 py-4 bg-blue-400">
@@ -20,7 +31,13 @@ const App = () => {
           </select>
         </div>
       </header>
-      <div></div>
+
+      <div>
+        {/* <Card nome={"Produto 1"} categoria={"Categoria A"} preco={"9,99"}/>
+        <Card nome={"Produto 2"} categoria={"Categoria B"} preco={"9,99"}/>
+        <Card nome={"Produto 3"} categoria={"Categoria C"} preco={"9,99"}/> */}
+      </div>
+
     </div>
    );
 }
