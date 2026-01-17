@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const App = () => {
+  return ( 
+    <div>
+      <header className="flex justify-between px-15 py-4 bg-blue-400">
+        <input 
+          type="text"
+          placeholder="Digite o nome do produto"
+          className="h-12 bg-white pl-4 w-100 rounded focus:outline-amber-300"
+        />
+        <div className="flex gap-4">
+          <select name="" id="" className="h-12 bg-white px-4 rounded outline-0">
+            <option value="">Escolha a categoria A</option>
+            <option value="">Escolha a categoria C</option>
+            <option value="">Escolha a categoria B</option>
+          </select>
+          <select name="" id="" className="h-12 bg-white px-4 rounded outline-0">
+            <option value="">Escolha a categoria A</option>
+            <option value="">Escolha a categoria C</option>
+            <option value="">Escolha a categoria B</option>
+          </select>
+        </div>
+      </header>
+      <div></div>
+    </div>
+   );
 }
-
-export default App
+ 
+export default App;
